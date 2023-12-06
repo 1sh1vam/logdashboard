@@ -1,9 +1,12 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import 'dotenv/config';
+import cors from 'cors';
 import { logRoute } from './routes';
 
 const app = express();
+
+app.use(cors({ origin: '*' }))
 
 app.use(express.json());
 
